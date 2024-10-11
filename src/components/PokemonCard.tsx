@@ -1,4 +1,8 @@
-const pokemonList = [
+interface PokemonCard {
+  name: string;
+  imgSrc: string;
+}
+/*const pokemonList = [
   {
     name: "bulbasaur",
     imgSrc:
@@ -7,16 +11,13 @@ const pokemonList = [
   {
     name: "mew",
   },
-];
-export default function PokemonCard() {
-  const pokemon = {
-    image: pokemonList[1].imgSrc,
-    name: pokemonList[1].name,
-  };
+];*/
+
+export default function PokemonCard({ pokemon }) {
   return (
     <figure>
-      {pokemon.image != null ? (
-        <img src={pokemon.image} alt="Bulbasaur" />
+      {pokemon.imgSrc != null ? (
+        <img src={pokemon.imgSrc} alt="Bulbasaur" />
       ) : (
         <p>???</p>
       )}

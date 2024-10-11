@@ -1,19 +1,27 @@
-interface PokemonCard {
+/*interface PokemonCard {
   name: string;
   imgSrc: string;
-}
+}*/
+
 /*const pokemonList = [
   {
     name: "bulbasaur",
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];*/
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    },
+    {
+      name: "mew",
+      },
+      ];*/
 
-export default function PokemonCard({ pokemon }) {
+interface Pokemon {
+  pokemon: {
+    name: string;
+    imgSrc?: string;
+  };
+}
+
+export default function Pokemon({ pokemon }: Pokemon) {
   return (
     <figure>
       {pokemon.imgSrc != null ? (
